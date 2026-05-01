@@ -1,0 +1,30 @@
+#gussing number (2 player game)
+import random 
+player1=input("Enter your name: ")
+player2=input("Enter your name: ")
+score_1=10
+score_2=10
+print("----------Player1---------")
+guess_number1=random.randint(1,10)
+while(True):
+  num1=int(input("Guess the number"))
+  score_1=score_1-1
+  if(guess_number1==num1):
+    break
+print("----------Player2---------")
+guess_number2=random.randint(1,10)
+while(True):
+  num2=int(input("Guess the number"))
+  score_2=score_2-1
+  if(guess_number2==num2):
+    break
+print("------------Summary--------")
+print("{} score= {}".format(player1,score_1))
+print("{} score= {}".format(player2,score_2))
+print("-------result---------")
+if(score_1>score_2):
+  print("{} is winner".format(player1))
+elif(score_2>score_1):
+  print("{} is winner".format(player2))
+else:
+  print("Draw")
